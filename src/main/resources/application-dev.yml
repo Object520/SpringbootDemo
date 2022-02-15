@@ -5,12 +5,15 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/pls_amazon?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/springboot_test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+## mybatis-plus时采用以下配置
+#mybatis-plus:
+#  mapper-locations: classpath:mapper/*.xml
+# mybatis时采用以下配置(前提是pom文件必须引入了mybatis-spring-boot-starter)
 mybatis:
-  mapper-locations: classpath:mapping/*Mapper.xml
-  type-aliases-package: com.example.entity
+  #mapperLocations: classpath:mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml
 
 #showSql
 logging:
